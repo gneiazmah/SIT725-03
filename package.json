@@ -1,5 +1,5 @@
 {
-  "name": "sit725-practical-05",
+  "name": "sit725-practical-07",
   "version": "1.0.0",
   "description": "SIT725 Practicals",
   "main": "server.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gneiazmah/SIT725-Practical-05.git"
+    "url": "git+https://github.com/gneiazmah/SIT725-Practical-07.git"
   },
   "keywords": [
     "Express",
@@ -17,13 +17,14 @@
   "author": "Azmah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gneiazmah/SIT725-Practical-05/issues"
+    "url": "https://github.com/gneiazmah/SIT725-Practical-07/issues"
   },
-  "homepage": "https://github.com/gneiazmah/SIT725-Practical-05#readme",
+  "homepage": "https://github.com/gneiazmah/SIT725-Practical-07#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongodb": "^4.12.1"
+    "mongodb": "^4.12.1",
+    "socket.io": "^4.5.4"
   }
 }
