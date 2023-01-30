@@ -5,6 +5,8 @@ let projectCollection;
 let dbConnect = require("./dbConnect");
 let projectRoutes = require("./routes/projectRoutes");
 
+let http = require ('http').createServer(app);
+let io = require('socket.io')(http);
 
 app.use(express.static(__dirname+'/public'))
 
@@ -50,33 +52,33 @@ app.use('/api/projects',projectRoutes)
 //     })
 // }
 
-const cardList = [
+// const cardList = [
 
-    {
+//     {
 
-        title: "Kitten 2",
+//         title: "Kitten 2",
 
-        image: "images/img-01.jpg",
+//         image: "images/img-01.jpg",
 
-        link: "About Kitten 2",
+//         link: "About Kitten 2",
 
-        desciption: "Demo desciption about kitten 2"
+//         desciption: "Demo desciption about kitten 2"
 
-    },
+//     },
 
-    {
+//     {
 
-        title: "Kitten 3",
+//         title: "Kitten 3",
 
-        image: "images/img-01.jpg",
+//         image: "images/img-01.jpg",
 
-        link: "About Kitten 3",
+//         link: "About Kitten 3",
 
-        desciption: "Demo desciption about kitten 3"
+//         desciption: "Demo desciption about kitten 3"
 
-    }
+//     }
 
-]
+// ]
 
 // app.get('/api/projects',(req,res) => {
 //     getProjects((err, result) => {
@@ -103,6 +105,19 @@ const cardList = [
 //             }
 //     })
 // })
+
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+
+  setInterval(()=>{
+    socket.emit('number', parseInt(Math.random()*10));
+  }, 1000);
+
+});
 
 var port = process.env.port || 3000;
 
