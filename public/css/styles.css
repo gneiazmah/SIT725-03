@@ -5,6 +5,12 @@
     margin: 0 auto;
 }
 
+nav {
+    color: #fff;
+    background-color: #545454;
+}
+
+
 .user-image-size {
 
     height: 56px;
@@ -14,9 +20,9 @@
 
 .main-body {
 
-    background-color: #F28487;
+    background-color: #ffffff;
 
-    color: white;
+    color: rgb(0, 0, 0);
 
     height: calc(100vh - 64px);
 
@@ -30,6 +36,26 @@
 
 .click-me-button {
 
-    background-color: #EE6E73;
+    background-color: #ffffff;
     margin-top: 50px;
 }
+
+div#map {
+    width:650px; 
+    height: 600px;
+    margin-top: 80px;
+  }
+
+  .btn {
+    background-color: #545454;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .btn:hover{
+    background-color: #757575;
+  }

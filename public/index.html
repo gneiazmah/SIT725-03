@@ -1,43 +1,36 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Locating position</title>
 
-  <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>SIT 725 Prac 04</title>
-
-  <meta name="description" content="basic template for SIT 725 Prac 04">
+  <meta name="description" content="basic template for SIT 725 Test">
 
   <meta name="author" content="SitePoint">
 
-  <meta property="og:title" content="SIT 725 Prac 04">
+  <meta property="og:title" content="SIT 725 test">
 
   <meta property="og:type" content="website">
 
-  <meta property="og:description" content="basic template for SIT 725 Prac 04">
+  <meta property="og:description" content="basic template for SIT 725 test">
 
+    <link rel="stylesheet" href="https://openlayers.org/en/v5.3.0/css/ol.css" type="text/css">
+    
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  <!-- Compiled and minified CSS -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
   <!-- Custom Style Sheet-->
 
   <link rel="stylesheet" href="css/styles.css">
-
-</head>
-
-
+  </head>
 <body>
 
-    <nav>
+  <nav>
 
         <div class="nav-wrapper navbar-size">
 
@@ -45,7 +38,11 @@
 
           <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-            <li><a target="_blank" href="https://www.linkedin.com/in/navit-choudhary-5133b9104/">LinkedIn</a></li>
+            <li><a target="_blank" href="#">Home</a></li>
+
+            <li><a target="_blank" href="#">About</a></li>
+
+            <li><a target="_blank" href="#">Contact</a></li>
 
           </ul>
 
@@ -54,151 +51,25 @@
     </nav>
 
     <main class="main-body">
-
-        <div class="container">
-  
-          <div class="row">
-  
-            <div class="col s12 center-align">
-  
-              <h1 id="heading">Welcome to SIT 725 Week 04</h1>
-  
-              <p class="flow-text">This is a demo application that tries to use a few components from materialize and through this practical we try to have some fun with Materialize and its components</p>
-  
-            </div>
-  
-            <div class="col s12 center-align">
-  
-              <img class="materialboxed materialboxed-image" src="images/img-02.jpg">
-  
-            </div>
-  
-            <div class="col s12 center-align">
-  
-              <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Click Me</a>
-  
-            </div>
-  
-          </div>
-  
-          <div class="row" id="card-section">
-  
-            <div class="col s4 center-align">
-  
-              <div class="card medium">
-  
-                <div class="card-image waves-effect waves-block waves-light">
-  
-                  <img class="activator" src="images/img-01.jpg">
-  
-                </div>
-  
-                <div class="card-content">
-  
-                  <span class="card-title activator grey-text text-darken-4">Kitten<i class="material-icons right">more_vert</i></span>
-  
-                  <p><a href="#">About kitten</a></p>
-  
-                </div>
-  
-                <div class="card-reveal">
-  
-                  <span class="card-title grey-text text-darken-4">Kitten<i class="material-icons right">close</i></span>
-  
-                  <p class="card-text">Hello There! I just wanted to say HI to you guys. See ya!</p>
-  
-                </div>
-  
-              </div>
-  
-            </div>
-  
-          </div>
-  
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h2>Locating position</h2>
+            <h3>SIT725-Project</h3>
+            <button class="btn">Track Order</button>
         </div>
-  
-        <!-- Modal Structure continues on next slide-->
-
-      <!-- Modal Structure -->
-
-      <div id="modal1" class="modal modal-fixed-footer">
-
-        <div class="row modal-content">
-
-          <form class="col s12">
-
-            <div class="row">
-
-              <div class="input-field col s6">
-
-                <input placeholder="Placeholder" id="title" type="text" class="validate">
-
-                <label for="title">Title</label>
-
-              </div>
-
-              <div class="input-field col s6">
-
-                <input id="image" type="text" class="validate">
-
-                <label for="image">Image</label>
-
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <div class="input-field col s12">
-
-                <input id="link" type="text" class="validate">
-
-                <label for="link">Link</label>
-
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <div class="input-field col s12">
-
-                <input id="description" type="text" class="validate">
-
-                <label for="description">Description</label>
-
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <div class="input-field col s12 center-align">
-
-                <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
-
-              </div>
-
-            </div>
-
-          </form>
-
+        <div class="col-4">
+          <div id="map">
+              <!-- Your map will be shown inside this div-->
+          </div>
         </div>
-
       </div>
+    </div>  
+  </main>
   
-      </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://openlayers.org/en/v5.3.0/build/ol.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-  <!-- Compiled and minified JavaScript -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <script src="js/scripts.js"></script>
-
-  <script src="/socket.io/socket.io.js"></script>
-
+<script type="text/javascript" src="js/scripts.js"></script>
 </body>
-
 </html>

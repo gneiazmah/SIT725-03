@@ -5,8 +5,8 @@ let projectCollection;
 let dbConnect = require("./dbConnect");
 let projectRoutes = require("./routes/projectRoutes");
 
-let http = require ('http').createServer(app);
-let io = require('socket.io')(http);
+ let http = require ('http').createServer(app);
+ let io = require('socket.io')(http);
 
 app.use(express.static(__dirname+'/public'))
 
@@ -106,6 +106,13 @@ app.use('/api/projects',projectRoutes)
 //     })
 // })
 
+app.get('/', function (req, res) {
+  redisSubscriber.subscribe('locationUpdate');
+  res.sendFile('views/index.html', {
+      root: __dirname
+  });
+});
+
 
 io.on('connection', (socket) => {
   console.log('a user connected');
@@ -119,9 +126,9 @@ io.on('connection', (socket) => {
 
 });
 
-var port = process.env.port || 3000;
+// var port = process.env.port || 6000;
 
-app.listen(port,()=>{
-    console.log("App listening to: http://localhost:"+port)
-    //createCollection("pets")
-})
+// app.listen(port,()=>{
+//     console.log("App listening to: http://localhost:"+port)
+//     //createCollection("pets")
+// })
